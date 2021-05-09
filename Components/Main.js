@@ -29,9 +29,12 @@ export default function Main() {
                             <TouchableOpacity style={[styles.searchIconBorder, styles.iconBorder]}>
                                 <Ionicons name="ios-search-outline" size={22} color="black"/>
                             </TouchableOpacity>
-
                         </View>
-                        <Text style={styles.inImgText}>FASHION ALWAYS CHANGING</Text>
+
+                        <Text style={styles.inImgText}>FASHION</Text>
+                        <Text style={styles.inImgText}>ALWAYS</Text>
+                        <Text style={styles.inImgText}>CHANGING</Text>
+
                         <TouchableOpacity style={styles.shopButton}>
                             <Text style={styles.shopButtonText}>Shop Now</Text>
                         </TouchableOpacity>
