@@ -7,7 +7,8 @@ import {useFonts} from 'expo-font'
 
 export default function App() {
     const [loaded] = useFonts({
-        CormorantGaramondBold: require('./assets/fonts/CormorantGaramond-Bold.ttf'),
+        AbrilFatface: require('./assets/fonts/AbrilFatface-Regular.ttf'),
+        ShipporMinchoB1: require('./assets/fonts/ShipporiMinchoB1-Regular.ttf'),
 
     });
 
