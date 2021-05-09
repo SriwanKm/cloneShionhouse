@@ -9,7 +9,7 @@ export default function App() {
     const [loaded] = useFonts({
         AbrilFatface: require('./assets/fonts/AbrilFatface-Regular.ttf'),
         ShipporMinchoB1: require('./assets/fonts/ShipporiMinchoB1-Regular.ttf'),
-
+        Ramaraja: require('./assets/fonts/Ramaraja-Regular.ttf'),
     });
 
     if (!loaded) {
