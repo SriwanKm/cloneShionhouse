@@ -52,12 +52,12 @@ export default function Main() {
 
 const styles = ScaledSheet.create({
     logoContainer: {
-        flex: '0.15@s',
+        flex: '0.2@s',
         backgroundColor: '#ffffff',
         alignItems: 'center',
-        // justifyContent: 'center',
+        justifyContent: 'center',
         paddingHorizontal: '15@s',
-        paddingTop: '50@s',
+        marginTop: '50@s',
         flexDirection: 'row',
     },
     logoText: {
@@ -71,14 +71,15 @@ const styles = ScaledSheet.create({
         fontSize: '44@s',
         color: '#9F79FF',
         textAlign: 'right',
+        marginTop: '10@s',
     },
     mainSection: {
-        paddingHorizontal: '15@s',
+        margin: '15@s',
     },
     image: {
         flex: 1,
         resizeMode: "cover",
-        height: '300@s',
+        height: '390@s',
         justifyContent: "center",
         alignItems: 'center',
 
@@ -89,7 +90,7 @@ const styles = ScaledSheet.create({
         fontSize: '45@s',
         textAlign: "center",
         fontFamily: 'Ramaraja',
-        lineHeight: 65,
+        lineHeight: '80@s',
     },
     s: {
         fontSize: '45@s'
@@ -98,10 +99,10 @@ const styles = ScaledSheet.create({
         backgroundColor: '#9F79FF',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 15,
-        paddingHorizontal: 28,
+        paddingVertical: '15@s',
+        paddingHorizontal: '28@s',
         borderRadius: 5,
-        marginBottom: '50@s',
+        marginVertical: '45@s',
     },
     shopButtonText: {
         color: 'white',
@@ -120,26 +121,24 @@ const styles = ScaledSheet.create({
         height: '42@s',
         borderRadius: 100,
         padding: 12,
-        marginVertical: '15@s',
         marginHorizontal: '5@s',
         alignItems: 'center',
         justifyContent: 'center',
     },
     socialContainer: {
         flexDirection: 'row',
+        marginTop: '15@s',
+        marginBottom: '50@s',
+
     },
     searchIconBorder: {
         backgroundColor: 'white'
     },
     addToCardBorder: {
         backgroundColor: '#9F79FF',
-        // borderColor: 'white',
-        // borderWidth: 1,
-        // width: '42@s',
         height: '42@s',
         borderRadius: 100,
         padding: 12,
-        marginVertical: '15@s',
         marginHorizontal: '5@s',
         alignItems: 'center',
         justifyContent: 'center',
