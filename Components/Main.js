@@ -2,9 +2,9 @@ import React from 'react';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
-import {Ionicons} from '@expo/vector-icons';
+import {Ionicons, AntDesign} from '@expo/vector-icons';
 
-const image = {uri: "https://reactjs.org/logo-og.png"};
+const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"};
 
 export default function Main() {
     return (
@@ -16,7 +16,10 @@ export default function Main() {
             <ScrollView>
                 <View style={styles.mainSection}>
                     <ImageBackground source={image} style={styles.image}>
-                        <Text style={styles.text}>FASHION ALWAYS CHANGING</Text>
+                        <TouchableOpacity style={styles.iconBorder}>
+                            <AntDesign style={styles.socialIcon} name="twitter"/>
+                        </TouchableOpacity>
+                        <Text style={styles.inImgText}>FASHION ALWAYS CHANGING</Text>
                         <TouchableOpacity style={styles.shopButton}>
                             <Text style={styles.shopButtonText}>Shop Now</Text>
                         </TouchableOpacity>
@@ -54,28 +57,48 @@ const styles = ScaledSheet.create({
         paddingHorizontal: '15@s',
     },
     image: {
-        // flex: 1,
+        flex: 1,
         resizeMode: "cover",
         height: '300@s',
         justifyContent: "center",
+        alignItems: 'center',
+
     },
-    text: {
+    inImgText: {
+        flex: 1,
         color: "white",
         fontSize: '45@s',
         textAlign: "center",
         fontFamily: 'Ramaraja',
-        lineHeight: '65@s',
+        lineHeight: 65,
     },
     s: {
         fontSize: '45@s'
     },
     shopButton: {
-        flex: 1,
         backgroundColor: '#9F79FF',
         alignItems: 'center',
         justifyContent: 'center',
+        paddingVertical: 15,
+        paddingHorizontal: 28,
+        borderRadius: 5,
+        marginBottom: '50@s',
     },
     shopButtonText: {
         color: 'white',
+        fontWeight: '500',
+        fontSize: '18@s',
+        letterSpacing: 1,
+    },
+    socialIcon: {
+        fontSize: '20@s',
+        color: "white",
+    },
+    iconBorder: {
+        borderColor: 'white',
+        borderWidth: 1,
+        borderRadius: 100,
+        padding: 12,
+        margin: '15@s',
     }
 })
