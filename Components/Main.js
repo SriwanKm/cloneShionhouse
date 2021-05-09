@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
-import {Ionicons, AntDesign} from '@expo/vector-icons';
+import {Ionicons, AntDesign, FontAwesome} from '@expo/vector-icons';
 
 const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"};
 
@@ -16,9 +16,21 @@ export default function Main() {
             <ScrollView>
                 <View style={styles.mainSection}>
                     <ImageBackground source={image} style={styles.image}>
-                        <TouchableOpacity style={styles.iconBorder}>
-                            <AntDesign style={styles.socialIcon} name="twitter"/>
-                        </TouchableOpacity>
+                        <View style={styles.socialContainer}>
+                            <TouchableOpacity style={styles.iconBorder}>
+                                <AntDesign style={styles.socialIcon} name="twitter"/>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.iconBorder}>
+                                <FontAwesome name="facebook" style={styles.socialIcon}/>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.iconBorder}>
+                                <FontAwesome name="pinterest-p" size={22} color="white"/>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={[styles.searchIconBorder, styles.iconBorder]}>
+                                <Ionicons name="ios-search-outline" size={22} color="black"/>
+                            </TouchableOpacity>
+
+                        </View>
                         <Text style={styles.inImgText}>FASHION ALWAYS CHANGING</Text>
                         <TouchableOpacity style={styles.shopButton}>
                             <Text style={styles.shopButtonText}>Shop Now</Text>
@@ -97,8 +109,18 @@ const styles = ScaledSheet.create({
     iconBorder: {
         borderColor: 'white',
         borderWidth: 1,
+        width: '42@s',
+        height: '42@s',
         borderRadius: 100,
         padding: 12,
         margin: '15@s',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    socialContainer: {
+        flexDirection: 'row',
+    },
+    searchIconBorder: {
+        backgroundColor: 'white'
     }
 })
