@@ -1,21 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
+import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import Main from './Components/Main'
+import {GlobalStyles} from "./styles/Global";
+import {useFonts} from 'expo-font'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Kookai app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    const [loaded] = useFonts({
+        CormorantGaramondBold: require('./assets/fonts/CormorantGaramond-Bold.ttf'),
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    });
+
+    if (!loaded) {
+        return null;
+    }
+    return (
+        <View style={GlobalStyles.container}>
+            <Main/>
+        </View>
+    );
+}
