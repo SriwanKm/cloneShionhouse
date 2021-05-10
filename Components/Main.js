@@ -1,21 +1,25 @@
 import React from 'react';
-import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
+import FeatureProducts from "./FeatureProducts";
 
-const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"};
+const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"}
+
 
 export default function Main() {
     return (
         <View style={GlobalStyles.container}>
-            <View style={styles.logoContainer}>
-                <Text style={styles.logoText}><Text style={styles.s}>S</Text>HION HOUSE</Text>
-                <Ionicons style={styles.hamburger} name="ios-menu-sharp"/>
-            </View>
             <ScrollView>
+
+                <View style={styles.logoContainer}>
+                    <Text style={styles.logoText}><Text style={styles.s}>S</Text>HION HOUSE</Text>
+                    <Ionicons style={styles.hamburger} name="ios-menu-sharp"/>
+                </View>
+
                 <View style={styles.mainSection}>
-                    <ImageBackground source={image} style={styles.image}>
+                    <ImageBackground source={image} style={GlobalStyles.image}>
                         <View style={styles.socialContainer}>
                             <TouchableOpacity style={styles.iconBorder}>
                                 <AntDesign style={styles.socialIcon} name="twitter"/>
@@ -34,25 +38,26 @@ export default function Main() {
                                 <Text style={{color: 'white', paddingHorizontal: 2}}>0</Text>
                             </TouchableOpacity>
                         </View>
-
                         <Text style={styles.inImgText}>FASHION</Text>
                         <Text style={styles.inImgText}>ALWAYS</Text>
                         <Text style={styles.inImgText}>CHANGING</Text>
-
-                        <TouchableOpacity style={styles.shopButton}>
-                            <Text style={styles.shopButtonText}>Shop Now</Text>
+                        <TouchableOpacity style={GlobalStyles.shopButton}>
+                            <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
                         </TouchableOpacity>
                     </ImageBackground>
+
+
+                    <FeatureProducts/>
+
                 </View>
             </ScrollView>
         </View>
     )
-        ;
 }
 
 const styles = ScaledSheet.create({
     logoContainer: {
-        flex: '0.2@s',
+        flex: 1,
         backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
@@ -71,19 +76,11 @@ const styles = ScaledSheet.create({
         fontSize: '44@s',
         color: '#9F79FF',
         textAlign: 'right',
-        marginTop: '10@s',
     },
     mainSection: {
-        margin: '15@s',
+        marginHorizontal: '15@s',
     },
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        height: '390@s',
-        justifyContent: "center",
-        alignItems: 'center',
 
-    },
     inImgText: {
         flex: 1,
         color: "white",
@@ -94,21 +91,6 @@ const styles = ScaledSheet.create({
     },
     s: {
         fontSize: '45@s'
-    },
-    shopButton: {
-        backgroundColor: '#9F79FF',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: '15@s',
-        paddingHorizontal: '28@s',
-        borderRadius: 5,
-        marginVertical: '45@s',
-    },
-    shopButtonText: {
-        color: 'white',
-        fontWeight: '500',
-        fontSize: '18@s',
-        letterSpacing: 1,
     },
     socialIcon: {
         fontSize: '20@s',
