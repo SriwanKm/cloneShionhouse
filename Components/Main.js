@@ -4,6 +4,7 @@ import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
 import FeatureProducts from "./FeatureProducts";
+import Footer from "./Footer";
 
 const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"}
 
@@ -11,30 +12,32 @@ const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/ga
 export default function Main() {
     return (
         <View style={GlobalStyles.container}>
-            <ScrollView>
 
+
+            <ScrollView>
                 <View style={styles.logoContainer}>
-                    <Text style={styles.logoText}><Text style={styles.s}>S</Text>HION HOUSE</Text>
+                    <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HION HOUSE</Text>
                     <Ionicons style={styles.hamburger} name="ios-menu-sharp"/>
                 </View>
 
-                <View style={styles.mainSection}>
+
+                <View style={GlobalStyles.mainSection}>
                     <ImageBackground source={image} style={GlobalStyles.image}>
-                        <View style={styles.socialContainer}>
-                            <TouchableOpacity style={styles.iconBorder}>
-                                <AntDesign style={styles.socialIcon} name="twitter"/>
+                        <View style={GlobalStyles.socialContainer}>
+                            <TouchableOpacity style={GlobalStyles.iconBorder}>
+                                <AntDesign style={GlobalStyles.socialIcon} name="twitter"/>
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.iconBorder}>
-                                <FontAwesome name="facebook" style={styles.socialIcon}/>
+                            <TouchableOpacity style={GlobalStyles.iconBorder}>
+                                <FontAwesome name="facebook" style={GlobalStyles.socialIcon}/>
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.iconBorder}>
+                            <TouchableOpacity style={GlobalStyles.iconBorder}>
                                 <FontAwesome name="pinterest-p" size={22} color="white"/>
                             </TouchableOpacity>
-                            <TouchableOpacity style={[styles.searchIconBorder, styles.iconBorder]}>
+                            <TouchableOpacity style={[styles.searchIconBorder, GlobalStyles.iconBorder]}>
                                 <Ionicons name="ios-search-outline" size={22} color="black"/>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.addToCardBorder}>
-                                <MaterialCommunityIcons name="shopping-outline" style={styles.socialIcon}/>
+                                <MaterialCommunityIcons name="shopping-outline" style={GlobalStyles.socialIcon}/>
                                 <Text style={{color: 'white', paddingHorizontal: 2}}>0</Text>
                             </TouchableOpacity>
                         </View>
@@ -50,6 +53,7 @@ export default function Main() {
                     <FeatureProducts/>
 
                 </View>
+                <Footer/>
             </ScrollView>
         </View>
     )
@@ -61,24 +65,16 @@ const styles = ScaledSheet.create({
         backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingHorizontal: '15@s',
+        paddingHorizontal: '25@s',
         marginTop: '50@s',
         flexDirection: 'row',
     },
-    logoText: {
-        fontFamily: 'Ramaraja',
-        fontSize: '34@s',
-        color: '#1D2547',
-        letterSpacing: 1.5,
-    },
+
     hamburger: {
         flex: 1,
         fontSize: '44@s',
         color: '#9F79FF',
         textAlign: 'right',
-    },
-    mainSection: {
-        marginHorizontal: '15@s',
     },
 
     inImgText: {
@@ -89,30 +85,6 @@ const styles = ScaledSheet.create({
         fontFamily: 'Ramaraja',
         lineHeight: '80@s',
     },
-    s: {
-        fontSize: '45@s'
-    },
-    socialIcon: {
-        fontSize: '20@s',
-        color: "white",
-    },
-    iconBorder: {
-        borderColor: 'white',
-        borderWidth: 1,
-        width: '42@s',
-        height: '42@s',
-        borderRadius: 100,
-        padding: 12,
-        marginHorizontal: '5@s',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    socialContainer: {
-        flexDirection: 'row',
-        marginTop: '15@s',
-        marginBottom: '50@s',
-
-    },
     searchIconBorder: {
         backgroundColor: 'white'
     },
@@ -120,7 +92,7 @@ const styles = ScaledSheet.create({
         backgroundColor: '#9F79FF',
         height: '42@s',
         borderRadius: 100,
-        padding: 12,
+        padding: '12@s',
         marginHorizontal: '5@s',
         alignItems: 'center',
         justifyContent: 'center',

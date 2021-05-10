@@ -4,6 +4,7 @@ import {LogBox, StyleSheet, Text, View} from 'react-native';
 import Main from './Components/Main'
 import {GlobalStyles} from "./styles/Global";
 import {useFonts} from 'expo-font'
+import * as ScreenOrientation from 'expo-screen-orientation'
 
 export default function App() {
     LogBox.ignoreLogs(['Remote debugger']);
