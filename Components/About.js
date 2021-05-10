@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
@@ -13,7 +13,7 @@ import NewArrival from "./NewArrival";
 const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"}
 
 
-export default function About({ navigation }) {
+export default function About({navigation}) {
 
     return (
         <View style={GlobalStyles.container}>
@@ -28,7 +28,15 @@ export default function About({ navigation }) {
                         name="ios-menu-sharp"/>
                 </View>
 
-
+                <View style={GlobalStyles.navBand}>
+                    <TouchableOpacity>
+                        <Text style={GlobalStyles.navBandText}>Home</Text>
+                    </TouchableOpacity>
+                    <Text style={GlobalStyles.navBandText}>&#x3e;</Text>
+                    <TouchableOpacity>
+                        <Text style={GlobalStyles.navBandText}>About</Text>
+                    </TouchableOpacity>
+                </View>
                 <View style={GlobalStyles.mainSection}>
 
 

@@ -1,4 +1,4 @@
-import { ScaledSheet } from 'react-native-size-matters'
+import {ScaledSheet} from 'react-native-size-matters'
 
 
 export const GlobalStyles = ScaledSheet.create({
@@ -110,7 +110,7 @@ export const GlobalStyles = ScaledSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: '25@s',
-        marginTop: '50@s',
+        // marginTop: '50@s',
         flexDirection: 'row',
     },
 
@@ -141,5 +141,19 @@ export const GlobalStyles = ScaledSheet.create({
     topArrivalHeadSection: {
         alignItems: 'center',
         paddingVertical: '20@s',
+    },
+    navBand: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        flexDirection: 'row',
+        backgroundColor: '#EFF5F8',
+        height: '50@s',
+        marginBottom: '20@s',
+    },
+    navBandText: {
+        color: '#949EA5',
+        paddingHorizontal: '3@s',
+        fontSize: '16@s',
     }
 });
