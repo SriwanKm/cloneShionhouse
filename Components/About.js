@@ -10,7 +10,10 @@ import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
 
-const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"}
+const image = [
+    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/about1.png"},
+    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/about2.png"},
+]
 
 
 export default function About({navigation}) {
@@ -39,9 +42,39 @@ export default function About({navigation}) {
                         <Text style={GlobalStyles.navBandText}>About</Text>
                     </TouchableOpacity>
                 </View>
+
                 <View style={GlobalStyles.mainSection}>
+                    <View style={{alignItems: 'center'}}>
+                    <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>O</Text>UR <Text style={GlobalStyles.s}>S</Text>TORY</Text>
+                    </View>
+                    <Text style={styles.aboutDetails}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </Text>
+                    <ImageBackground source={image[0]} style={[GlobalStyles.image, {height: 250}]}/>
 
+                    <View style={{alignItems: 'center'}}>
+                        <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>J</Text>OURNEY START FROM</Text>
+                    </View>
+                    <Text style={styles.aboutDetails}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </Text>
+                    <ImageBackground source={image[1]} style={[GlobalStyles.image, {height: 250}]}/>
 
+                    <View style={{alignItems: 'center'}}>
+                        <Text style={GlobalStyles.logoText}>2020</Text>
+                    </View>
+                    <Text style={styles.aboutDetails}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </Text>
                     <FeatureProducts/>
 
                 </View>
@@ -50,4 +83,16 @@ export default function About({navigation}) {
         </View>
     )
 }
+
+const styles = ScaledSheet.create(
+    {
+        aboutDetails: {
+            textAlign: 'center',
+            color: '#646D77',
+            fontSize: '16@s',
+            lineHeight: '25@s',
+            paddingBottom: '28@s',
+        }
+    }
+)
 

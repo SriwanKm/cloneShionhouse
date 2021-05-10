@@ -40,6 +40,7 @@ export const GlobalStyles = ScaledSheet.create({
     },
     mainSection: {
         marginHorizontal: '25@s',
+
     },
     socialIcon: {
         fontSize: '18@s',
@@ -110,7 +111,6 @@ export const GlobalStyles = ScaledSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: '25@s',
-        // marginTop: '50@s',
         flexDirection: 'row',
     },
 
@@ -145,7 +145,6 @@ export const GlobalStyles = ScaledSheet.create({
     navBand: {
         alignItems: 'center',
         justifyContent: 'center',
-        textAlign: 'center',
         flexDirection: 'row',
         backgroundColor: '#EFF5F8',
         height: '50@s',
