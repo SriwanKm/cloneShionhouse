@@ -72,4 +72,36 @@ export const GlobalStyles = ScaledSheet.create({
         justifyContent: 'center',
         flexDirection: 'row',
     },
+    star: {
+        fontSize: '22@s',
+        color: '#FBBA43'
+    },
+    stars: {
+        flexDirection: 'row',
+        paddingVertical: '10@s',
+    },
+    newArrivalDetails: {
+        alignItems: 'center',
+        borderColor: '#F6F8FE',
+        borderWidth: 1,
+        paddingVertical: '25@s',
+        marginBottom: '50@s'
+    },
+    newArrivalText: {
+        fontSize: '18@s',
+        color: '#140C40',
+    },
+    newArrivalPrice: {
+        fontSize: '15@s',
+        color: '#444444'
+    },
+    addToCardBorderArr: {
+        backgroundColor: '#ffffff',
+        height: '42@s',
+        borderRadius: 100,
+        padding: '12@s',
+        position: 'absolute',
+        right: '20@s',
+        top: '20@s',
+    }
 });
