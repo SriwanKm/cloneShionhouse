@@ -55,29 +55,6 @@ export default function Footer() {
 }
 const styles = ScaledSheet.create(
     {
-        featureProductButt: {
-            backgroundColor: 'rgba(63,77,97,0.6)',
-            width:
-                '100%',
-            height:
-                '70@s',
-            position:
-                'absolute',
-            bottom:
-                0,
-            alignItems:
-                'center',
-            justifyContent:
-                'center',
-        }
-        ,
-        featureProductText: {
-            color: 'white',
-            fontFamily:
-                'ShipporMinchoB1',
-            fontSize:
-                '22@s',
-        },
         footer: {
             backgroundColor: '#1D2547',
             padding: '20@s'
@@ -89,7 +66,6 @@ const styles = ScaledSheet.create(
             color: '#C2C5DB',
             lineHeight: '25@s',
             marginBottom: '25@s',
-
         },
         subHeadFooter: {
             fontSize: '16@s',
@@ -98,7 +74,6 @@ const styles = ScaledSheet.create(
             fontWeight: 'bold',
             marginTop: '20@s',
             marginBottom: '10@s',
-
         },
         subFooterText: {
             lineHeight: '28@s',

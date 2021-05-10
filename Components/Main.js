@@ -5,6 +5,7 @@ import {ScaledSheet} from 'react-native-size-matters'
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
+import NewArrival from "./NewArrival";
 
 const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"}
 
@@ -51,7 +52,7 @@ export default function Main() {
 
 
                     <FeatureProducts/>
-
+                    <NewArrival/>
                 </View>
                 <Footer/>
             </ScrollView>
