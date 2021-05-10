@@ -52,6 +52,10 @@ export default function Main() {
 
 
                     <FeatureProducts/>
+                    <View style={styles.topArrivalHeadSection}>
+                        <Text style={styles.topArrivalHeader}>NEW</Text>
+                        <Text style={styles.topArrivalHeader}>ARRIVAL</Text>
+                    </View>
                     <NewArrival/>
                 </View>
                 <Footer/>
@@ -99,4 +103,14 @@ const styles = ScaledSheet.create({
         justifyContent: 'center',
         flexDirection: 'row',
     },
+    topArrivalHeader: {
+        fontFamily: 'Ramaraja',
+        fontSize: '34@s',
+        color: '#1D2547',
+        lineHeight: '45@s'
+    },
+    topArrivalHeadSection: {
+        alignItems: 'center',
+        paddingVertical: '20@s',
+    }
 })
