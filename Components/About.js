@@ -29,11 +29,13 @@ export default function About({navigation}) {
                 </View>
 
                 <View style={GlobalStyles.navBand}>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('Main')}>
                         <Text style={GlobalStyles.navBandText}>Home</Text>
                     </TouchableOpacity>
                     <Text style={GlobalStyles.navBandText}>&#x3e;</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('About')}>
                         <Text style={GlobalStyles.navBandText}>About</Text>
                     </TouchableOpacity>
                 </View>
