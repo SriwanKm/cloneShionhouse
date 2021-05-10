@@ -37,7 +37,7 @@ export default function Main() {
                             <TouchableOpacity style={[styles.searchIconBorder, GlobalStyles.iconBorder]}>
                                 <Ionicons name="ios-search-outline" size={22} color="black"/>
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.addToCardBorder}>
+                            <TouchableOpacity style={GlobalStyles.addToCardBorder}>
                                 <MaterialCommunityIcons name="shopping-outline" style={GlobalStyles.socialIcon}/>
                                 <Text style={{color: 'white', paddingHorizontal: 2}}>0</Text>
                             </TouchableOpacity>
@@ -92,16 +92,6 @@ const styles = ScaledSheet.create({
     },
     searchIconBorder: {
         backgroundColor: 'white'
-    },
-    addToCardBorder: {
-        backgroundColor: '#9F79FF',
-        height: '42@s',
-        borderRadius: 100,
-        padding: '12@s',
-        marginHorizontal: '5@s',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'row',
     },
     topArrivalHeader: {
         fontFamily: 'Ramaraja',

@@ -25,7 +25,11 @@ export default function NewArrival() {
     const images = image.map(({uri}) => {
         return (
             <View>
-                <ImageBackground source={{uri}} style={[GlobalStyles.image, {marginBottom: 0}]}/>
+                <ImageBackground source={{uri}} style={[GlobalStyles.image, {marginBottom: 0}]}>
+                    <TouchableOpacity style={styles.addToCardBorderArr}>
+                        <MaterialCommunityIcons name="shopping-outline" style={[GlobalStyles.socialIcon, {color: '#9F79FF'}]}/>
+                    </TouchableOpacity>
+                </ImageBackground>
                 <View style={styles.newArrivalDetails}>
                     <TouchableOpacity><Text style={styles.newArrivalText}>Knitted Jumper</Text></TouchableOpacity>
                     <View style={styles.stars}>
@@ -70,6 +74,15 @@ const styles = ScaledSheet.create(
         newArrivalPrice: {
             fontSize: '15@s',
             color: '#444444'
+        },
+        addToCardBorderArr: {
+            backgroundColor: '#ffffff',
+            height: '42@s',
+            borderRadius: 100,
+            padding: '12@s',
+            position: 'absolute',
+            right: '20@s',
+            top: '20@s',
         }
     }
 )

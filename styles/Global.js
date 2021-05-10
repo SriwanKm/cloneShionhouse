@@ -62,4 +62,14 @@ export const GlobalStyles = ScaledSheet.create({
         marginBottom: '50@s',
 
     },
+    addToCardBorder: {
+        backgroundColor: '#9F79FF',
+        height: '42@s',
+        borderRadius: 100,
+        padding: '12@s',
+        marginHorizontal: '5@s',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+    },
 });
