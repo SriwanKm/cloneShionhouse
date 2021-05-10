@@ -103,5 +103,43 @@ export const GlobalStyles = ScaledSheet.create({
         position: 'absolute',
         right: '20@s',
         top: '20@s',
+    },
+    logoContainer: {
+        flex: 1,
+        backgroundColor: '#ffffff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: '25@s',
+        marginTop: '50@s',
+        flexDirection: 'row',
+    },
+
+    hamburger: {
+        flex: 1,
+        fontSize: '44@s',
+        color: '#9F79FF',
+        textAlign: 'right',
+    },
+
+    inImgText: {
+        flex: 1,
+        color: "white",
+        fontSize: '45@s',
+        textAlign: "center",
+        fontFamily: 'Ramaraja',
+        lineHeight: '80@s',
+    },
+    searchIconBorder: {
+        backgroundColor: 'white'
+    },
+    topArrivalHeader: {
+        fontFamily: 'Ramaraja',
+        fontSize: '34@s',
+        color: '#1D2547',
+        lineHeight: '45@s'
+    },
+    topArrivalHeadSection: {
+        alignItems: 'center',
+        paddingVertical: '20@s',
     }
 });

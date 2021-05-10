@@ -1,10 +1,13 @@
-import {StatusBar} from 'expo-status-bar';
-import React from 'react';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import {LogBox, StyleSheet, Text, View} from 'react-native';
 import Main from './Components/Main'
 import {GlobalStyles} from "./styles/Global";
 import {useFonts} from 'expo-font'
 import * as ScreenOrientation from 'expo-screen-orientation'
+import About from './Components/About'
 
 export default function App() {
     LogBox.ignoreLogs(['Remote debugger']);
@@ -14,12 +17,17 @@ export default function App() {
         Ramaraja: require('./assets/fonts/Ramaraja-Regular.ttf'),
     });
 
+    const Stack = createStackNavigator();
+
     if (!loaded) {
         return null;
     }
     return (
-        <View style={GlobalStyles.container}>
-            <Main/>
-        </View>
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Main" component={Main} />
+                <Stack.Screen name="About" component={About} />
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 }
