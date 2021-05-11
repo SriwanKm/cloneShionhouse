@@ -1,7 +1,8 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
@@ -9,6 +10,9 @@ import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/ve
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
+
+const Drawer = createDrawerNavigator();
+
 
 const image = [
     {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/about1.png"},
@@ -32,8 +36,7 @@ export default function Shop({navigation}) {
                 </View>
 
                 <View style={GlobalStyles.navBand}>
-                    <TouchableOpacity
-                        onPress={toggleDrawer}>
+                    <TouchableOpacity>
                         <Text style={GlobalStyles.navBandText}>Home</Text>
                     </TouchableOpacity>
                     <Text style={GlobalStyles.navBandText}>&#x3e;</Text>

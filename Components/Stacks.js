@@ -11,17 +11,16 @@ import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
 import CustomSidebarMenu from "./CustomSideMenu";
-import {Ionicons} from "@expo/vector-icons";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 // const NavigationDrawerStructure = (props) => {
     //Structure for the navigatin Drawer
-    const toggleDrawer = () => {
-        //Props to open/close the drawer
-        props.navigationProps.toggleDrawer();
-    };
+    // const toggleDrawer = () => {
+    //     //Props to open/close the drawer
+    //     props.navigationProps.toggleDrawer();
+    // };
 
     // return (
     //     <Ionicons
