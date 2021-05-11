@@ -27,13 +27,13 @@ export default function Shop({navigation}) {
                     <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HION HOUSE</Text>
                     <Ionicons
                         style={GlobalStyles.hamburger}
-                        onPress={() => navigation.navigate('About')}
+                        onPress={() => navigation.toggleDrawer()}
                         name="ios-menu-sharp"/>
                 </View>
 
                 <View style={GlobalStyles.navBand}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Main')}>
+                        onPress={toggleDrawer}>
                         <Text style={GlobalStyles.navBandText}>Home</Text>
                     </TouchableOpacity>
                     <Text style={GlobalStyles.navBandText}>&#x3e;</Text>

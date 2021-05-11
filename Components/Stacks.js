@@ -11,31 +11,25 @@ import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
 import CustomSidebarMenu from "./CustomSideMenu";
+import {Ionicons} from "@expo/vector-icons";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const NavigationDrawerStructure = (props) => {
+// const NavigationDrawerStructure = (props) => {
     //Structure for the navigatin Drawer
     const toggleDrawer = () => {
         //Props to open/close the drawer
         props.navigationProps.toggleDrawer();
     };
 
-    return (
-        <View style={{ flexDirection: 'row' }}>
-            <TouchableOpacity onPress={toggleDrawer}>
-                <Image
-                    source={{
-                        uri:
-                            'https://raw.githubusercontent.com/AboutReact/sampleresource/master/drawerWhite.png',
-                    }}
-                    style={{ width: 25, height: 25, marginLeft: 5 }}
-                />
-            </TouchableOpacity>
-        </View>
-    );
-};
+    // return (
+    //     <Ionicons
+    //         style={GlobalStyles.hamburger}
+    //         onPress={toggleDrawer}
+    //         name="ios-menu-sharp"/>
+    // );
+// };
 
 function mainScreenStack({ navigation }) {
     return (
@@ -45,9 +39,12 @@ function mainScreenStack({ navigation }) {
                 component={Main}
                 options={{
                     title: 'Main', //Set Header Title
-                    headerLeft: () => (
-                        <NavigationDrawerStructure navigationProps={navigation} />
-                    ),
+                    // headerLeft: () => (
+                    //     <NavigationDrawerStructure navigationProps={navigation} />
+                    // ),
+                    headerStyle: {
+                        backgroundColor: '#f4511e', //Set Header color
+                    },
                     headerTintColor: '#fff', //Set Header text color
                     headerTitleStyle: {
                         fontWeight: 'bold', //Set Header text style
@@ -63,9 +60,9 @@ function aboutScreenStack({ navigation }) {
         <Stack.Navigator
             initialRouteName="About"
             screenOptions={{
-                headerLeft: () => (
-                    <NavigationDrawerStructure navigationProps={navigation} />
-                ),
+                // headerLeft: () => (
+                //     <NavigationDrawerStructure navigationProps={navigation} />
+                // ),
                 headerStyle: {
                     backgroundColor: '#f4511e', //Set Header color
                 },
@@ -105,9 +102,9 @@ function shopScreenStack({ navigation }) {
         <Stack.Navigator
             initialRouteName="Shop"
             screenOptions={{
-                headerLeft: () => (
-                    <NavigationDrawerStructure navigationProps={navigation} />
-                ),
+                // headerLeft: () => (
+                //     <NavigationDrawerStructure navigationProps={navigation} />
+                // ),
                 headerStyle: {
                     backgroundColor: '#f4511e', //Set Header color
                 },
@@ -120,7 +117,7 @@ function shopScreenStack({ navigation }) {
                 name="Main"
                 component={Main}
                 options={{
-                    title: 'Main',
+                    title: 'Main', //Set Header Title
                 }}
             />
             <Stack.Screen
