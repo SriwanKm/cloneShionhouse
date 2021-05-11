@@ -3,11 +3,11 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {LogBox, StyleSheet, Text, View} from 'react-native';
-import Main from './Components/Main'
 import {GlobalStyles} from "./styles/Global";
 import {useFonts} from 'expo-font'
 import * as ScreenOrientation from 'expo-screen-orientation'
-import About from './Components/About'
+import Stacks from "./Components/Stacks";
+
 
 export default function App() {
     LogBox.ignoreLogs(['Remote debugger']);
@@ -23,11 +23,6 @@ export default function App() {
         return null;
     }
     return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Main" component={Main} />
-                <Stack.Screen name="About" component={About} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <Stacks/>
     );
 }
