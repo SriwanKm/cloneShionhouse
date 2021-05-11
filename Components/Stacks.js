@@ -48,9 +48,6 @@ function mainScreenStack({ navigation }) {
                     headerLeft: () => (
                         <NavigationDrawerStructure navigationProps={navigation} />
                     ),
-                    headerStyle: {
-                        backgroundColor: '#f4511e', //Set Header color
-                    },
                     headerTintColor: '#fff', //Set Header text color
                     headerTitleStyle: {
                         fontWeight: 'bold', //Set Header text style

@@ -19,17 +19,17 @@ export default function CustomSidebarMenu({ navigation }) {
             {
                 navOptionThumb: 'camera',
                 navOptionName: 'First Screen',
-                screenToNavigate: 'NavScreen1',
+                screenToNavigate: 'Main',
             },
             {
                 navOptionThumb: 'image',
                 navOptionName: 'Second Screen',
-                screenToNavigate: 'NavScreen2',
+                screenToNavigate: 'Shop',
             },
             {
                 navOptionThumb: 'build',
                 navOptionName: 'Third Screen',
-                screenToNavigate: 'NavScreen3',
+                screenToNavigate: 'About',
             },
         ];
 
