@@ -16,13 +16,8 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 export default function Main({ navigation }) {
-
-
-
     return (
         <View style={GlobalStyles.container}>
-
-
             <ScrollView>
                 <View style={GlobalStyles.logoContainer}>
                     <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HION HOUSE</Text>

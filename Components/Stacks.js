@@ -43,9 +43,9 @@ function mainScreenStack({ navigation }) {
                     //     <NavigationDrawerStructure navigationProps={navigation} />
                     // ),
                     headerStyle: {
-                        backgroundColor: '#f4511e', //Set Header color
+                        backgroundColor: '#fff', //Set Header color
                     },
-                    headerTintColor: '#fff', //Set Header text color
+                    headerTintColor: '#9F79FF', //Set Header text color
                     headerTitleStyle: {
                         fontWeight: 'bold', //Set Header text style
                     },
@@ -64,9 +64,9 @@ function aboutScreenStack({ navigation }) {
                 //     <NavigationDrawerStructure navigationProps={navigation} />
                 // ),
                 headerStyle: {
-                    backgroundColor: '#f4511e', //Set Header color
+                    backgroundColor: '#fff', //Set Header color
                 },
-                headerTintColor: '#fff', //Set Header text color
+                headerTintColor: '#9F79FF', //Set Header text color
                 headerTitleStyle: {
                     fontWeight: 'bold', //Set Header text style
                 },
@@ -106,9 +106,9 @@ function shopScreenStack({ navigation }) {
                 //     <NavigationDrawerStructure navigationProps={navigation} />
                 // ),
                 headerStyle: {
-                    backgroundColor: '#f4511e', //Set Header color
+                    backgroundColor: '#fff', //Set Header color
                 },
-                headerTintColor: '#fff', //Set Header text color
+                headerTintColor: '#9F79FF', //Set Header text color
                 headerTitleStyle: {
                     fontWeight: 'bold', //Set Header text style
                 },

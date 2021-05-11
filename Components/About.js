@@ -27,7 +27,7 @@ export default function About({navigation}) {
                     <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HION HOUSE</Text>
                     <Ionicons
                         style={GlobalStyles.hamburger}
-                        onPress={() => navigation.navigate('About')}
+                        onPress={() => navigation.toggleDrawer()}
                         name="ios-menu-sharp"/>
                 </View>
 
