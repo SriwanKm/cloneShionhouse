@@ -12,23 +12,25 @@ import {useFonts} from 'expo-font'
 import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
+import Stacks from "./Stacks";
+
 
 export default function CustomSidebarMenu({ navigation }) {
 
         let items = [
             {
-                navOptionThumb: 'camera',
-                navOptionName: 'First Screen',
+                // navOptionThumb: 'camera',
+                navOptionName: 'Home',
                 screenToNavigate: 'Main',
             },
             {
-                navOptionThumb: 'image',
-                navOptionName: 'Second Screen',
+                // navOptionThumb: 'image',
+                navOptionName: 'Shop',
                 screenToNavigate: 'Shop',
             },
             {
-                navOptionThumb: 'build',
-                navOptionName: 'Third Screen',
+                // navOptionThumb: 'build',
+                navOptionName: 'About',
                 screenToNavigate: 'About',
             },
         ];
@@ -56,8 +58,7 @@ export default function CustomSidebarMenu({ navigation }) {
                                 paddingBottom: 10,
                             }}>
                             <View style={{ marginRight: 10, marginLeft: 20 }}>
-                                <Icon name={item.navOptionThumb} size={25} color="#808080" />
-                            </View>
+                            {/*    <Icon name={item.navOptionThumb} size={25} color="#808080" />*/}
                             <Text
                                 style={{
                                     fontSize: 15,
@@ -68,6 +69,8 @@ export default function CustomSidebarMenu({ navigation }) {
                                 }}>
                                 {item.navOptionName}
                             </Text>
+                            </View>
+
                         </View>
                     ))}
                 </View>

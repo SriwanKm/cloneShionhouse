@@ -10,6 +10,8 @@ import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/ve
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
+import Stacks from "./Stacks";
+
 
 const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"}
 const Stack = createStackNavigator();
@@ -52,7 +54,9 @@ export default function Main({ navigation }) {
                         <Text style={GlobalStyles.inImgText}>FASHION</Text>
                         <Text style={GlobalStyles.inImgText}>ALWAYS</Text>
                         <Text style={GlobalStyles.inImgText}>CHANGING</Text>
-                        <TouchableOpacity style={GlobalStyles.shopButton}>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('Shop')}
+                            style={GlobalStyles.shopButton}>
                             <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
                         </TouchableOpacity>
                     </ImageBackground>

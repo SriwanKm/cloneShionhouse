@@ -154,5 +154,22 @@ export const GlobalStyles = ScaledSheet.create({
         color: '#949EA5',
         paddingHorizontal: '3@s',
         fontSize: '16@s',
-    }
+    },
+    browseMoreButton: {
+        borderColor: '#9F79FF',
+        borderWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: '20@s',
+        paddingHorizontal: '18@s',
+        borderRadius: 5,
+        marginBottom: '50@s',
+        marginHorizontal: '35@s',
+    },
+    browseMoreButtonText: {
+        color: '#9F79FF',
+        fontWeight: '500',
+        fontSize: '16@s',
+        letterSpacing: 1,
+    },
 });

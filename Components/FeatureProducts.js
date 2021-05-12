@@ -2,13 +2,20 @@ import React, {useState, useEffect} from 'react';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button, Dimensions} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
+import Stacks from "./Stacks";
 
+
+const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const window = Dimensions.get('window');
 const screen = Dimensions.get('screen');
 
-export default function FeatureProducts() {
+export default function FeatureProducts({navigation}) {
     const [dimensions, setDimensions] = useState({window, screen});
     const onChange = ({window, screen}) => {
         setDimensions({window, screen});
@@ -49,7 +56,9 @@ export default function FeatureProducts() {
     ];
     const images = image.map(({uri, name}) => {
         return (<ImageBackground source={{uri}} style={GlobalStyles.image}>
-            <TouchableOpacity style={GlobalStyles.shopButton}>
+            <TouchableOpacity
+                // onPress={() => navigation.navigate('Shop')}
+                style={GlobalStyles.shopButton}>
                 <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.featureProductButt}>

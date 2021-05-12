@@ -8,6 +8,8 @@ import {ScaledSheet} from 'react-native-size-matters'
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
+import Stacks from "./Stacks";
+
 
 const window = Dimensions.get('window');
 const screen = Dimensions.get('screen');
@@ -45,12 +47,17 @@ export default function NewArrival({ navigation }) {
                     </View>
                     <Text style={GlobalStyles.newArrivalPrice}>$ 30.00</Text>
                 </View>
+
             </View>
         )
     })
     return (
         <View>
             {images}
+            <TouchableOpacity
+                style={GlobalStyles.browseMoreButton}>
+                <Text style={GlobalStyles.browseMoreButtonText}>Browse More</Text>
+            </TouchableOpacity>
         </View>
     )
 }

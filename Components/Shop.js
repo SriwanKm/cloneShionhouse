@@ -10,6 +10,8 @@ import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/ve
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
+import Stacks from "./Stacks";
+
 
 const Drawer = createDrawerNavigator();
 
@@ -36,48 +38,26 @@ export default function Shop({navigation}) {
                 </View>
 
                 <View style={GlobalStyles.navBand}>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('Main')}>
+
                         <Text style={GlobalStyles.navBandText}>Home</Text>
                     </TouchableOpacity>
                     <Text style={GlobalStyles.navBandText}>&#x3e;</Text>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('About')}>
-                        <Text style={GlobalStyles.navBandText}>About</Text>
+                        onPress={() => navigation.navigate('Shop')}>
+                        <Text style={GlobalStyles.navBandText}>Shop</Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style={GlobalStyles.mainSection}>
-                    <View style={{alignItems: 'center'}}>
-                        <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>O</Text>UR <Text style={GlobalStyles.s}>S</Text>TORY</Text>
+                    <View>
+                        <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HOP WITH US </Text>
                     </View>
-                    <Text style={styles.aboutDetails}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <Text style={[styles.aboutDetails, {textAlign: 'left'}]}>
+                        Browse from 230 latest items
                     </Text>
-                    <ImageBackground source={image[0]} style={[GlobalStyles.image, {height: 250}]}/>
-
-                    <View style={{alignItems: 'center'}}>
-                        <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>J</Text>OURNEY START FROM</Text>
-                    </View>
-                    <Text style={styles.aboutDetails}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </Text>
-                    <ImageBackground source={image[1]} style={[GlobalStyles.image, {height: 250}]}/>
-
-                    <View style={{alignItems: 'center'}}>
-                        <Text style={GlobalStyles.logoText}>2020</Text>
-                    </View>
-                    <Text style={styles.aboutDetails}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </Text>
+                    <NewArrival/>
                     <FeatureProducts/>
 
                 </View>
