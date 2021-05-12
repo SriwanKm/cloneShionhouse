@@ -11,6 +11,7 @@ import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
 import CustomSidebarMenu from "./CustomSideMenu";
+import Contact from "./Contact";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -137,6 +138,54 @@ function shopScreenStack({ navigation }) {
     );
 }
 
+function contactScreenStack({ navigation }) {
+    return (
+        <Stack.Navigator
+            initialRouteName="Contact"
+            screenOptions={{
+                // headerLeft: () => (
+                //     <NavigationDrawerStructure navigationProps={navigation} />
+                // ),
+                headerStyle: {
+                    backgroundColor: '#fff', //Set Header color
+                },
+                headerTintColor: '#9F79FF', //Set Header text color
+                headerTitleStyle: {
+                    fontWeight: 'bold', //Set Header text style
+                },
+            }}>
+            <Stack.Screen
+                name="Main"
+                component={Main}
+                options={{
+                    title: 'Main', //Set Header Title
+                }}
+            />
+            <Stack.Screen
+                name="Shop"
+                component={Shop}
+                options={{
+                    title: 'Shop',
+                }}
+            />
+            <Stack.Screen
+                name="About"
+                component={About}
+                options={{
+                    title: 'About',
+                }}
+            />
+            <Stack.Screen
+                name="Contact"
+                component={Contact}
+                options={{
+                    title: 'Contact',
+                }}
+            />
+        </Stack.Navigator>
+    );
+}
+
 
 
 
@@ -164,6 +213,11 @@ function Stacks() {
                     name="About"
                     options={{ drawerLabel: 'About page Option' }}
                     component={aboutScreenStack}
+                />
+                <Drawer.Screen
+                    name="Contact"
+                    options={{ drawerLabel: 'Contact page Option' }}
+                    component={contactScreenStack}
                 />
             </Drawer.Navigator>
         </NavigationContainer>
