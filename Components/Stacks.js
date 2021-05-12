@@ -92,6 +92,13 @@ function aboutScreenStack({ navigation }) {
                     title: 'About', //Set Header Title
                 }}
             />
+            <Stack.Screen
+                name="Contact"
+                component={Contact}
+                options={{
+                    title: 'Contact',
+                }}
+            />
         </Stack.Navigator>
     );
 }
@@ -132,6 +139,13 @@ function shopScreenStack({ navigation }) {
                 component={About}
                 options={{
                     title: 'About',
+                }}
+            />
+            <Stack.Screen
+                name="Contact"
+                component={Contact}
+                options={{
+                    title: 'Contact',
                 }}
             />
         </Stack.Navigator>
