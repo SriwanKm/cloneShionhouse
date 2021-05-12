@@ -1,17 +1,16 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {StyleSheet, Picker, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
-import Stacks from "./Stacks";
-
+import ShopPicker from "./ShopPicker"
 
 const Drawer = createDrawerNavigator();
 
@@ -57,6 +56,8 @@ export default function Shop({navigation}) {
                     <Text style={[styles.aboutDetails, {textAlign: 'left'}]}>
                         Browse from 230 latest items
                     </Text>
+
+                    <ShopPicker/>
                     <NewArrival/>
                     <FeatureProducts/>
 
@@ -75,7 +76,7 @@ const styles = ScaledSheet.create(
             fontSize: '16@s',
             lineHeight: '25@s',
             paddingBottom: '28@s',
-        }
+        },
     }
 )
 

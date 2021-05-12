@@ -5447,6 +5447,11 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
+"react-native-dropdown-picker@^5.1.11":
+  "integrity" "sha512-PLycEDFIxZFZnyBx0iRihizcXlqZj+P8Zljh2bqVhN3937IHX+o75eFilQQ8x1GXRWE2x5nx3GvYvrqYPdBSvQ=="
+  "resolved" "https://registry.npmjs.org/react-native-dropdown-picker/-/react-native-dropdown-picker-5.1.11.tgz"
+  "version" "5.1.11"
+
 "react-native-elements@^3.4.1":
   "integrity" "sha512-SPotW75psW1qyZgtiWuiKSTASdd4yNYvf6/vgO6nyl2kEgZG5nP5wtFxL/GsUVxwHh7yc8xnJ3J9pkApa7p9lQ=="
   "resolved" "https://registry.npmjs.org/react-native-elements/-/react-native-elements-3.4.1.tgz"

@@ -11,7 +11,6 @@ import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
 import CustomSidebarMenu from "./CustomSideMenu";
-import FeatureProducts from "./FeatureProducts";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -134,7 +133,6 @@ function shopScreenStack({ navigation }) {
                     title: 'About',
                 }}
             />
-
         </Stack.Navigator>
     );
 }
