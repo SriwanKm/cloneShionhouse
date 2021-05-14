@@ -166,6 +166,16 @@ export const GlobalStyles = ScaledSheet.create({
         marginBottom: '50@s',
         marginHorizontal: '35@s',
     },
+    sendButton: {
+        borderColor: '#9F79FF',
+        borderWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: '20@s',
+        paddingHorizontal: '18@s',
+        width: '150@s',
+        marginVertical: '30@s',
+    },
     browseMoreButtonText: {
         color: '#9F79FF',
         fontWeight: '500',

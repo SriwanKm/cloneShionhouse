@@ -83,8 +83,13 @@ export default function Contact({navigation}) {
                             placeholderTextColor='#999999'
                         />
                     </View>
-
-
+                    <View>
+                        <TouchableOpacity
+                            style={GlobalStyles.sendButton}>
+                            <Text
+                                style={[GlobalStyles.browseMoreButtonText, {fontFamily: 'ShipporMinchoB1'}]}>SEND</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <Footer/>
             </ScrollView>
@@ -112,6 +117,7 @@ const styles = ScaledSheet.create(
         messageMessageInput: {
             height: '150@s',
         },
+
     }
 )
 
