@@ -5,6 +5,7 @@ export const GlobalStyles = ScaledSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        paddingTop: '30@s',
     },
     logoText: {
         fontFamily: 'Ramaraja',
@@ -22,7 +23,6 @@ export const GlobalStyles = ScaledSheet.create({
         justifyContent: "center",
         alignItems: 'center',
         marginBottom: '40@s',
-        // width: '680@s',
     },
     shopButton: {
         backgroundColor: '#9F79FF',
