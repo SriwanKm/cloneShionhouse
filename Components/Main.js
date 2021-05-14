@@ -1,8 +1,8 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button, Image} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
@@ -17,7 +17,7 @@ const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/ga
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-export default function Main({ navigation }) {
+export default function Main({navigation}) {
     return (
         <View style={GlobalStyles.container}>
             <ScrollView>
@@ -32,35 +32,36 @@ export default function Main({ navigation }) {
 
 
                 <View style={GlobalStyles.mainSection}>
-                    <ImageBackground source={image} style={GlobalStyles.image}>
-                        <View style={GlobalStyles.socialContainer}>
-                            <TouchableOpacity style={GlobalStyles.iconBorder}>
-                                <AntDesign style={GlobalStyles.socialIcon} name="twitter"/>
+                    <View>
+                        <ImageBackground source={image} style={GlobalStyles.image}>
+                            <View style={GlobalStyles.socialContainer}>
+                                <TouchableOpacity style={GlobalStyles.iconBorder}>
+                                    <AntDesign style={GlobalStyles.socialIcon} name="twitter"/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={GlobalStyles.iconBorder}>
+                                    <FontAwesome name="facebook" style={GlobalStyles.socialIcon}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={GlobalStyles.iconBorder}>
+                                    <FontAwesome name="pinterest-p" size={22} color="white"/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={[GlobalStyles.searchIconBorder, GlobalStyles.iconBorder]}>
+                                    <Ionicons name="ios-search-outline" size={20} color="black"/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={GlobalStyles.addToCardBorder}>
+                                    <MaterialCommunityIcons name="shopping-outline" style={GlobalStyles.socialIcon}/>
+                                    <Text style={{color: 'white', paddingHorizontal: 2}}>0</Text>
+                                </TouchableOpacity>
+                            </View>
+                            <Text style={GlobalStyles.inImgText}>FASHION</Text>
+                            <Text style={GlobalStyles.inImgText}>ALWAYS</Text>
+                            <Text style={GlobalStyles.inImgText}>CHANGING</Text>
+                            <TouchableOpacity
+                                onPress={() => navigation.navigate('Shop')}
+                                style={GlobalStyles.shopButton}>
+                                <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={GlobalStyles.iconBorder}>
-                                <FontAwesome name="facebook" style={GlobalStyles.socialIcon}/>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={GlobalStyles.iconBorder}>
-                                <FontAwesome name="pinterest-p" size={22} color="white"/>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={[GlobalStyles.searchIconBorder, GlobalStyles.iconBorder]}>
-                                <Ionicons name="ios-search-outline" size={20} color="black"/>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={GlobalStyles.addToCardBorder}>
-                                <MaterialCommunityIcons name="shopping-outline" style={GlobalStyles.socialIcon}/>
-                                <Text style={{color: 'white', paddingHorizontal: 2}}>0</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <Text style={GlobalStyles.inImgText}>FASHION</Text>
-                        <Text style={GlobalStyles.inImgText}>ALWAYS</Text>
-                        <Text style={GlobalStyles.inImgText}>CHANGING</Text>
-                        <TouchableOpacity
-                            onPress={() => navigation.navigate('Shop')}
-                            style={GlobalStyles.shopButton}>
-                            <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
-                        </TouchableOpacity>
-                    </ImageBackground>
-
+                        </ImageBackground>
+                    </View>
 
                     <FeatureProducts/>
                     <View style={GlobalStyles.topArrivalHeadSection}>

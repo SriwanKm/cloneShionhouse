@@ -22,6 +22,7 @@ export const GlobalStyles = ScaledSheet.create({
         justifyContent: "center",
         alignItems: 'center',
         marginBottom: '40@s',
+        // width: '680@s',
     },
     shopButton: {
         backgroundColor: '#9F79FF',
@@ -31,6 +32,8 @@ export const GlobalStyles = ScaledSheet.create({
         paddingHorizontal: '18@s',
         borderRadius: 5,
         marginVertical: '45@s',
+        width: '150@s',
+        height: '50@s',
     },
     shopButtonText: {
         color: 'white',
@@ -165,6 +168,7 @@ export const GlobalStyles = ScaledSheet.create({
         borderRadius: 5,
         marginBottom: '50@s',
         marginHorizontal: '35@s',
+        width: '200@s',
     },
     sendButton: {
         borderColor: '#9F79FF',
