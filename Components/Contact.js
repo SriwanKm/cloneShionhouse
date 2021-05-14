@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
-import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
+import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons, Feather} from '@expo/vector-icons';
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
@@ -90,6 +90,29 @@ export default function Contact({navigation}) {
                                 style={[GlobalStyles.browseMoreButtonText, {fontFamily: 'ShipporMinchoB1'}]}>SEND</Text>
                         </TouchableOpacity>
                     </View>
+                    <View style={{marginBottom: 50}}>
+                        <View style={styles.contactDetailContainer}>
+                            <AntDesign name="home" style={styles.contactDetailIcon}/>
+                            <View>
+                                <Text style={styles.contactDetailText1}>BUTTONWOOD, CALIFORNIA.</Text>
+                                <Text style={styles.contactDetailText2}>Rosemead, CA 91770</Text>
+                            </View>
+                        </View>
+                        <View style={styles.contactDetailContainer}>
+                            <MaterialCommunityIcons name="tablet-ipad" style={styles.contactDetailIcon}/>
+                            <View>
+                                <Text style={[styles.contactDetailText1, styles.contactDetailPhoneText]}>+1 253 565 2365</Text>
+                                <Text style={styles.contactDetailText2}>Mon to Fri 9am to 6pm</Text>
+                            </View>
+                        </View>
+                        <View style={styles.contactDetailContainer}>
+                            <Feather name="mail" style={styles.contactDetailIcon}/>
+                            <View>
+                                <Text style={styles.contactDetailText1}>SUPPORT@COLORLIB.COM</Text>
+                                <Text style={styles.contactDetailText2}>Send us your query anytime!</Text>
+                            </View>
+                        </View>
+                    </View>
                 </View>
                 <Footer/>
             </ScrollView>
@@ -117,7 +140,28 @@ const styles = ScaledSheet.create(
         messageMessageInput: {
             height: '150@s',
         },
-
+        contactDetailIcon: {
+            fontSize: '30@s',
+            marginRight: '18@s',
+            color:'#8A8A8A'
+        },
+        contactDetailText1: {
+            fontFamily: 'ShipporMinchoB1',
+            fontSize: '14@s',
+        },
+        contactDetailText2: {
+            fontSize: '14@s',
+            color:'#8A8A8A'
+        },
+        contactDetailPhoneText: {
+            fontSize: '16@s',
+            letterSpacing: '1@s'
+        },
+        contactDetailContainer: {
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginBottom: '18@s',
+        },
     }
 )
 
