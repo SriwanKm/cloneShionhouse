@@ -186,4 +186,10 @@ export const GlobalStyles = ScaledSheet.create({
         fontSize: '16@s',
         letterSpacing: 1,
     },
+    closeIcon: {
+        position: 'absolute',
+        right: '16@s',
+        top: '50@s',
+        zIndex: 1
+    },
 });
