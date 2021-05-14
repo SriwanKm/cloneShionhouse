@@ -35,29 +35,25 @@ export default function FeatureProducts({navigation}) {
     }
     const image = [
         {
-            key: 1,
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular1.png",
             name: "GLASSES"
         },
         {
-            key: 2,
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular2.png",
             name: "WATCHES"
         },
         {
-            key: 3,
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular3.png",
             name: "JACKETS"
         },
         {
-            key: 4,
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png",
             name: "CLOTHES"
         },
 
     ];
-    const images = image.map(({uri, name}) => {
-        return (<ImageBackground source={{uri}} style={GlobalStyles.image}>
+    const images = image.map(({uri, name, key}) => {
+        return (<ImageBackground key={Math.random()} source={{uri}} style={GlobalStyles.image}>
             <TouchableOpacity
                 // onPress={() => navigation.navigate('Shop')}
                 style={GlobalStyles.shopButton}>

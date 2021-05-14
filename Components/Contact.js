@@ -3,7 +3,17 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {StyleSheet, Picker, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
+import {
+    StyleSheet,
+    Picker,
+    Text,
+    View,
+    TextInput,
+    ImageBackground,
+    TouchableOpacity,
+    ScrollView,
+    Button
+} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
@@ -42,15 +52,38 @@ export default function Contact({navigation}) {
 
                 <View style={GlobalStyles.mainSection}>
                     <View>
-                        <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HOP WITH US </Text>
-                    </View>
-                    <Text style={[styles.aboutDetails, {textAlign: 'left'}]}>
-                        Browse from 230 latest items
-                    </Text>
+                        <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>G</Text>ET IN <Text
+                            style={GlobalStyles.s}>T</Text>OUCH
+                        </Text>
+                        <TextInput
+                            placeholder='Enter Message'
+                            style={[styles.messageInput, styles.messageMessageInput]}
+                            maxLength={40}
+                            placeholderTextColor='#999999'
 
-                    <ShopPicker/>
-                    <NewArrival/>
-                    <FeatureProducts/>
+                        />
+                        <TextInput
+                            placeholder='Enter your name'
+                            style={styles.messageInput}
+                            maxLength={40}
+                            placeholderTextColor='#999999'
+
+                        />
+                        <TextInput
+                            placeholder='Email'
+                            style={styles.messageInput}
+                            maxLength={40}
+                            placeholderTextColor='#999999'
+
+                        />
+                        <TextInput
+                            placeholder='Enter Subject'
+                            style={styles.messageInput}
+                            maxLength={40}
+                            placeholderTextColor='#999999'
+                        />
+                    </View>
+
 
                 </View>
                 <Footer/>
@@ -67,6 +100,17 @@ const styles = ScaledSheet.create(
             fontSize: '16@s',
             lineHeight: '25@s',
             paddingBottom: '28@s',
+        },
+        messageInput: {
+            borderColor: '#E5E6E9',
+            borderWidth: 1,
+            height: '55@s',
+            paddingLeft: '20@s',
+            marginVertical: '12@s',
+            fontSize: '14@s'
+        },
+        messageMessageInput: {
+            height: '150@s',
         },
     }
 )

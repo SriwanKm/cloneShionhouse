@@ -51,6 +51,27 @@ function mainScreenStack({ navigation }) {
                     },
                 }}
             />
+            {/*<Stack.Screen*/}
+            {/*    name="Shop"*/}
+            {/*    component={Shop}*/}
+            {/*    options={{*/}
+            {/*        title: 'Shop', //Set Header Title*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Stack.Screen*/}
+            {/*    name="About"*/}
+            {/*    component={About}*/}
+            {/*    options={{*/}
+            {/*        title: 'About', //Set Header Title*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Stack.Screen*/}
+            {/*    name="Contact"*/}
+            {/*    component={Contact}*/}
+            {/*    options={{*/}
+            {/*        title: 'Contact',*/}
+            {/*    }}*/}
+            {/*/>*/}
         </Stack.Navigator>
     );
 }
@@ -71,13 +92,13 @@ function aboutScreenStack({ navigation }) {
                     fontWeight: 'bold', //Set Header text style
                 },
             }}>
-            <Stack.Screen
-                name="Main"
-                component={Main}
-                options={{
-                    title: 'Main', //Set Header Title
-                }}
-            />
+            {/*<Stack.Screen*/}
+            {/*    name="Main"*/}
+            {/*    component={Main}*/}
+            {/*    options={{*/}
+            {/*        title: 'Main', //Set Header Title*/}
+            {/*    }}*/}
+            {/*/>*/}
             <Stack.Screen
                 name="Shop"
                 component={Shop}
@@ -120,13 +141,13 @@ function shopScreenStack({ navigation }) {
                     fontWeight: 'bold', //Set Header text style
                 },
             }}>
-            <Stack.Screen
-                name="Main"
-                component={Main}
-                options={{
-                    title: 'Main', //Set Header Title
-                }}
-            />
+            {/*<Stack.Screen*/}
+            {/*    name="Main"*/}
+            {/*    component={Main}*/}
+            {/*    options={{*/}
+            {/*        title: 'Main', //Set Header Title*/}
+            {/*    }}*/}
+            {/*/>*/}
             <Stack.Screen
                 name="Shop"
                 component={Shop}
@@ -168,20 +189,20 @@ function contactScreenStack({ navigation }) {
                     fontWeight: 'bold', //Set Header text style
                 },
             }}>
-            <Stack.Screen
-                name="Main"
-                component={Main}
-                options={{
-                    title: 'Main', //Set Header Title
-                }}
-            />
-            <Stack.Screen
-                name="Shop"
-                component={Shop}
-                options={{
-                    title: 'Shop',
-                }}
-            />
+            {/*<Stack.Screen*/}
+            {/*    name="Main"*/}
+            {/*    component={Main}*/}
+            {/*    options={{*/}
+            {/*        title: 'Main', //Set Header Title*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Stack.Screen*/}
+            {/*    name="Shop"*/}
+            {/*    component={Shop}*/}
+            {/*    options={{*/}
+            {/*        title: 'Shop',*/}
+            {/*    }}*/}
+            {/*/>*/}
             <Stack.Screen
                 name="About"
                 component={About}
@@ -214,10 +235,10 @@ function Stacks() {
                 }}
                 drawerContent={(props) => <CustomSidebarMenu {...props} />}>
                 <Drawer.Screen
-                    name="Main"
-                    options={{ drawerLabel: 'Main page Option' }}
-                    component={mainScreenStack}
-                />
+                name="Main"
+                options={{ drawerLabel: 'Main page Option' }}
+                component={mainScreenStack}
+            />
                 <Drawer.Screen
                     name="Shop"
                     options={{ drawerLabel: 'Shop page Option' }}
