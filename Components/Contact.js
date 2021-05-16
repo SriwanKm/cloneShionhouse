@@ -35,6 +35,24 @@ export default function Contact({navigation}) {
             <ScrollView>
                 <View style={GlobalStyles.logoContainer}>
                     <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HION HOUSE</Text>
+                    <View style={{flexDirection: 'row', position: 'absolute', right: 100}}>
+                        <TouchableOpacity style={GlobalStyles.iconBorderL}>
+                            <AntDesign style={GlobalStyles.socialIconL} name="twitter"/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={GlobalStyles.iconBorderL}>
+                            <FontAwesome name="facebook" style={GlobalStyles.socialIconL}/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={GlobalStyles.iconBorderL}>
+                            <FontAwesome name="pinterest-p" size={22} style={GlobalStyles.socialIconL}/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[GlobalStyles.searchIconBorder, GlobalStyles.iconBorder]}>
+                            <Ionicons name="ios-search-outline" size={20} style={GlobalStyles.socialIconL}/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={GlobalStyles.addToCardBorder}>
+                            <MaterialCommunityIcons name="shopping-outline" style={GlobalStyles.socialIcon}/>
+                            <Text style={{color: 'white', paddingHorizontal: 2}}>0</Text>
+                        </TouchableOpacity>
+                    </View>
                     <Ionicons
                         style={GlobalStyles.hamburger}
                         onPress={() => navigation.toggleDrawer()}

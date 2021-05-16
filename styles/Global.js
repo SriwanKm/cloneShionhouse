@@ -49,8 +49,23 @@ export const GlobalStyles = ScaledSheet.create({
         fontSize: '18@s',
         color: "white",
     },
+    socialIconL: {
+        fontSize: '18@s',
+        color: "#1D2547",
+    },
     iconBorder: {
         borderColor: 'white',
+        borderWidth: 1,
+        width: '42@s',
+        height: '42@s',
+        borderRadius: 100,
+        padding: '12@s',
+        marginHorizontal: '5@s',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    iconBorderL: {
+        borderColor: '#E4E5E9',
         borderWidth: 1,
         width: '42@s',
         height: '42@s',
@@ -133,7 +148,7 @@ export const GlobalStyles = ScaledSheet.create({
         lineHeight: '80@s',
     },
     searchIconBorder: {
-        backgroundColor: 'white'
+        backgroundColor: '#F6F8FE'
     },
     topArrivalHeader: {
         fontFamily: 'Ramaraja',
