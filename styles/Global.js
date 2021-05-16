@@ -202,7 +202,7 @@ export const GlobalStyles = ScaledSheet.create({
     },
     blogDetailText: {
         fontSize: '14@s',
-        letterSpacing: 1,
+        letterSpacing: 0.5,
         marginBottom: '14@s',
         color: '#656D77',
         paddingHorizontal: '12@s',
@@ -239,5 +239,24 @@ export const GlobalStyles = ScaledSheet.create({
         shadowRadius: 10,
         backgroundColor: 'white',
         marginBottom: '50@s',
+    },
+    blogIcon1: {
+        fontSize: '22@s',
+        color: '#999999'
+    },
+    blogIcon2: {
+        fontSize: '18@s',
+        color: '#999999',
+        marginLeft: '5@s'
+    },
+    blogIconContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingLeft: 10,
+        paddingVertical: 20
+    },
+    blogIconText: {
+        color: '#999999',
+        marginHorizontal: '5@s'
     }
 });

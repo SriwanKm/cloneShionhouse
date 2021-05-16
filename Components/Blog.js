@@ -35,11 +35,18 @@ const image = images.map(({uri}, navigation) => {
             </ImageBackground>
                 <View>
                     <TouchableOpacity onPress={() => navigation.navigate('Blog')}>
-                        <Text style={GlobalStyles.blogHeaderText}>GOOGLE INKS PACT FOR NEW 35-STOREY OFFICE</Text>
+                        <Text style={GlobalStyles.blogHeaderText}>GOOGLE INKS PACT FOR NEW 35-STORY OFFICE</Text>
                     </TouchableOpacity>
                     <Text style={GlobalStyles.blogDetailText}>That dominion stars lights dominion divide years for
                         fourth have don't stars is that he earth it first without heaven in place seed it second morning
                         saying.</Text>
+                    <View style={GlobalStyles.blogIconContainer}>
+                        <MaterialCommunityIcons style={GlobalStyles.blogIcon1} name="account"/>
+                        <Text style={GlobalStyles.blogIconText}>Travel, Lifestyle</Text>
+                        <Text> | </Text>
+                        <FontAwesome style={GlobalStyles.blogIcon2} name="comments"/>
+                        <Text style={GlobalStyles.blogIconText}>T03 Comments</Text>
+                    </View>
                 </View>
         </View>
     )
