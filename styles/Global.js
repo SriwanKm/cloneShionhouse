@@ -198,12 +198,15 @@ export const GlobalStyles = ScaledSheet.create({
         letterSpacing: 1,
         marginBottom: '12@s',
         color: '#2D2D2D',
+        paddingHorizontal: '12@s',
     },
     blogDetailText: {
         fontSize: '14@s',
         letterSpacing: 1,
         marginBottom: '14@s',
-        color: '#656D77'
+        color: '#656D77',
+        paddingHorizontal: '12@s',
+
     },
     dateBlogText: {
         color: 'white',
@@ -220,6 +223,7 @@ export const GlobalStyles = ScaledSheet.create({
         marginVertical: '45@s',
         bottom: '-60@s',
         left: '10@s',
+        zIndex: 100,
     },
     blogImage: {
         flex: 1,
@@ -228,5 +232,12 @@ export const GlobalStyles = ScaledSheet.create({
         // justifyContent: "center",
         // alignItems: 'center',
         marginBottom: '40@s',
+    },
+    blogShadow: {
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowRadius: 10,
+        backgroundColor: 'white',
+        marginBottom: '50@s',
     }
 });

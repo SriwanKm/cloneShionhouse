@@ -22,21 +22,25 @@ const images = [
     {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/blog/single_blog_5.png"},
 ]
 
-const image = images.map(({uri}) => {
+const image = images.map(({uri}, navigation) => {
     return (
-        <View key={Math.random()}>
+        <View key={Math.random()} style={GlobalStyles.blogShadow}>
             <ImageBackground source={{uri}} style={GlobalStyles.blogImage}>
-            <TouchableOpacity
-                // onPress={() => navigation.navigate('Shop')}
-                style={GlobalStyles.dateButton}>
-                <Text style={[GlobalStyles.dateBlogText, {fontFamily: 'AbrilFatface'}]}>15</Text>
-                <Text style={GlobalStyles.dateBlogText}>Jan</Text>
-            </TouchableOpacity>
+                <TouchableOpacity
+                    // onPress={() => navigation.navigate('Shop')}
+                    style={GlobalStyles.dateButton}>
+                    <Text style={[GlobalStyles.dateBlogText, {fontFamily: 'AbrilFatface'}]}>15</Text>
+                    <Text style={GlobalStyles.dateBlogText}>Jan</Text>
+                </TouchableOpacity>
             </ImageBackground>
-            <View>
-                    <Text style={GlobalStyles.blogHeaderText}>GOOGLE INKS PACT FOR NEW 35-STOREY OFFICE</Text>
-                <Text style={GlobalStyles.blogDetailText}>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</Text>
-            </View>
+                <View>
+                    <TouchableOpacity onPress={() => navigation.navigate('Blog')}>
+                        <Text style={GlobalStyles.blogHeaderText}>GOOGLE INKS PACT FOR NEW 35-STOREY OFFICE</Text>
+                    </TouchableOpacity>
+                    <Text style={GlobalStyles.blogDetailText}>That dominion stars lights dominion divide years for
+                        fourth have don't stars is that he earth it first without heaven in place seed it second morning
+                        saying.</Text>
+                </View>
         </View>
     )
 })

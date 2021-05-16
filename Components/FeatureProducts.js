@@ -52,7 +52,7 @@ export default function FeatureProducts({navigation}) {
         },
 
     ];
-    const images = image.map(({uri, name, key}) => {
+    const images = image.map(({uri, name}) => {
         return (
             <ImageBackground key={Math.random()} source={{uri}} style={GlobalStyles.image}>
             <TouchableOpacity
