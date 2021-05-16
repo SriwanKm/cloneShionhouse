@@ -21,8 +21,12 @@ import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
 import ShopPicker from "./ShopPicker"
+import {Video, AVPlaybackStatus} from 'expo-av';
+
 
 export default function Contact({navigation}) {
+    const video = React.useRef(null);
+    const [status, setStatus] = React.useState({});
 
     return (
         <View style={GlobalStyles.container}>
@@ -55,6 +59,30 @@ export default function Contact({navigation}) {
                         <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>G</Text>ET IN <Text
                             style={GlobalStyles.s}>T</Text>OUCH
                         </Text>
+
+
+                        <Video
+                            ref={video}
+                            style={styles.video}
+                            source={{
+                                uri: 'https://player.vimeo.com/external/529682809.sd.mp4?s=97f15bc483ae0d2c5d1ae59b87820e99824be3e0&amp;profile_id=164&amp;oauth2_token_id=57447761',
+                            }}
+                            useNativeControls
+                            resizeMode="contain"
+                            isLooping
+                            onPlaybackStatusUpdate={status => setStatus(() => status)}
+                        />
+                        <View style={styles.buttons}>
+                            <Button
+                                title={status.isPlaying ? 'Pause' : 'Play'}
+                                onPress={() =>
+                                    status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
+                                }
+                            />
+                        </View>
+
+
+
                         <TextInput
                             placeholder='Enter Message'
                             style={[styles.messageInput, styles.messageMessageInput]}
@@ -161,6 +189,16 @@ const styles = ScaledSheet.create(
             flexDirection: 'row',
             alignItems: 'center',
             marginBottom: '18@s',
+        },
+        video: {
+            alignSelf: 'center',
+            width: '340@s',
+            height: '180@s',
+        },
+        buttons: {
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
         },
     }
 )

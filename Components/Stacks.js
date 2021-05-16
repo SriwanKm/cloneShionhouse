@@ -10,7 +10,6 @@ import {useFonts} from 'expo-font'
 import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
-import CustomSidebarMenu from "./CustomSideMenu";
 import Contact from "./Contact";
 import Blog from "./Blog";
 import {Ionicons} from "@expo/vector-icons";
