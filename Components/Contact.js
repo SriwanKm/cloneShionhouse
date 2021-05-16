@@ -39,7 +39,7 @@ export default function Contact({navigation}) {
 
                 <View style={GlobalStyles.navBand}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Main')}>
+                        onPress={() => navigation.navigate('Home')}>
 
                         <Text style={GlobalStyles.navBandText}>Home</Text>
                     </TouchableOpacity>

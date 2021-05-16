@@ -15,12 +15,6 @@ import ShopPicker from "./ShopPicker"
 const Drawer = createDrawerNavigator();
 
 
-const image = [
-    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/about1.png"},
-    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/about2.png"},
-]
-
-
 export default function Blog({navigation}) {
 
     return (
@@ -38,7 +32,7 @@ export default function Blog({navigation}) {
 
                 <View style={GlobalStyles.navBand}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Main')}>
+                        onPress={() => navigation.navigate('Home')}>
 
                         <Text style={GlobalStyles.navBandText}>Home</Text>
                     </TouchableOpacity>
@@ -50,16 +44,11 @@ export default function Blog({navigation}) {
                 </View>
 
                 <View style={GlobalStyles.mainSection}>
-                    <View>
-                        <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HOP WITH US </Text>
-                    </View>
-                    <Text style={[styles.aboutDetails, {textAlign: 'left'}]}>
-                        Browse from 230 latest items
-                    </Text>
 
-                    <ShopPicker/>
-                    <NewArrival/>
-                    <FeatureProducts/>
+
+
+
+
 
                 </View>
                 <Footer/>

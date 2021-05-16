@@ -30,7 +30,7 @@ export default function NewArrival({navigation}) {
 
     const images = image.map(({uri}) => {
         return (
-            <View style={{zIndex: 100}}>
+            <View key={Math.random()} style={{zIndex: 100}}>
                 <ImageBackground source={{uri}} style={[GlobalStyles.image, {marginBottom: 0}]}>
                     <TouchableOpacity style={GlobalStyles.addToCardBorderArr}>
                         <MaterialCommunityIcons name="shopping-outline"

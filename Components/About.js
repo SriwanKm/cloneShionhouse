@@ -37,7 +37,7 @@ export default function About({navigation}) {
 
                 <View style={GlobalStyles.navBand}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Main')}>
+                        onPress={() => navigation.navigate('Home')}>
                         <Text style={GlobalStyles.navBandText}>Home</Text>
                     </TouchableOpacity>
                     <Text style={GlobalStyles.navBandText}>&#x3e;</Text>
