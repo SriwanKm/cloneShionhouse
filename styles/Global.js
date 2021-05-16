@@ -192,4 +192,41 @@ export const GlobalStyles = ScaledSheet.create({
         top: '50@s',
         zIndex: 1
     },
+    blogHeaderText: {
+        fontSize: '18@s',
+        fontFamily: 'AbrilFatface',
+        letterSpacing: 1,
+        marginBottom: '12@s',
+        color: '#2D2D2D',
+    },
+    blogDetailText: {
+        fontSize: '14@s',
+        letterSpacing: 1,
+        marginBottom: '14@s',
+        color: '#656D77'
+    },
+    dateBlogText: {
+        color: 'white',
+        fontSize: '22@s',
+        letterSpacing: 1,
+    },
+    dateButton: {
+        position: 'absolute',
+        backgroundColor: '#9F79FF',
+        // justifyContent: 'center',
+        paddingVertical: '10@s',
+        paddingHorizontal: '15@s',
+        borderRadius: 5,
+        marginVertical: '45@s',
+        bottom: '-60@s',
+        left: '10@s',
+    },
+    blogImage: {
+        flex: 1,
+        resizeMode: "cover",
+        height: '200@s',
+        // justifyContent: "center",
+        // alignItems: 'center',
+        marginBottom: '40@s',
+    }
 });

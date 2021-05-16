@@ -14,6 +14,32 @@ import ShopPicker from "./ShopPicker"
 
 const Drawer = createDrawerNavigator();
 
+const images = [
+    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/blog/single_blog_1.png"},
+    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/blog/single_blog_2.png"},
+    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/blog/single_blog_3.png"},
+    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/blog/single_blog_4.png"},
+    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/blog/single_blog_5.png"},
+]
+
+const image = images.map(({uri}) => {
+    return (
+        <View key={Math.random()}>
+            <ImageBackground source={{uri}} style={GlobalStyles.blogImage}>
+            <TouchableOpacity
+                // onPress={() => navigation.navigate('Shop')}
+                style={GlobalStyles.dateButton}>
+                <Text style={[GlobalStyles.dateBlogText, {fontFamily: 'AbrilFatface'}]}>15</Text>
+                <Text style={GlobalStyles.dateBlogText}>Jan</Text>
+            </TouchableOpacity>
+            </ImageBackground>
+            <View>
+                    <Text style={GlobalStyles.blogHeaderText}>GOOGLE INKS PACT FOR NEW 35-STOREY OFFICE</Text>
+                <Text style={GlobalStyles.blogDetailText}>That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</Text>
+            </View>
+        </View>
+    )
+})
 
 export default function Blog({navigation}) {
 
@@ -46,8 +72,7 @@ export default function Blog({navigation}) {
                 <View style={GlobalStyles.mainSection}>
 
 
-
-
+                    {image}
 
 
                 </View>
@@ -57,15 +82,4 @@ export default function Blog({navigation}) {
     )
 }
 
-const styles = ScaledSheet.create(
-    {
-        aboutDetails: {
-            textAlign: 'center',
-            color: '#646D77',
-            fontSize: '16@s',
-            lineHeight: '25@s',
-            paddingBottom: '28@s',
-        },
-    }
-)
 

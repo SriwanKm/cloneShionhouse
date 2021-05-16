@@ -53,16 +53,17 @@ export default function FeatureProducts({navigation}) {
 
     ];
     const images = image.map(({uri, name, key}) => {
-        return (<ImageBackground key={Math.random()} source={{uri}} style={GlobalStyles.image}>
+        return (
+            <ImageBackground key={Math.random()} source={{uri}} style={GlobalStyles.image}>
             <TouchableOpacity
-                // onPress={() => navigation.navigate('Shop')}
                 style={GlobalStyles.shopButton}>
                 <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.featureProductButt}>
                 <Text style={styles.featureProductText}>{name}</Text>
             </TouchableOpacity>
-        </ImageBackground>)
+        </ImageBackground>
+        )
     })
     return (
         <View>

@@ -15,12 +15,6 @@ import ShopPicker from "./ShopPicker"
 const Drawer = createDrawerNavigator();
 
 
-const image = [
-    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/about1.png"},
-    {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/about2.png"},
-]
-
-
 export default function Shop({navigation}) {
 
     return (
