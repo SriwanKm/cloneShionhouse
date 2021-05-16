@@ -12,7 +12,8 @@ import {
     ImageBackground,
     TouchableOpacity,
     ScrollView,
-    Button
+    Button,
+    Dimensions
 } from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
@@ -22,9 +23,29 @@ import Footer from "./Footer";
 import NewArrival from "./NewArrival";
 import ShopPicker from "./ShopPicker"
 import {Video, AVPlaybackStatus} from 'expo-av';
+import {useEffect, useState} from "react";
 
+
+const window = Dimensions.get('window');
+const screen = Dimensions.get('screen');
 
 export default function Contact({navigation}) {
+    const [dimensions, setDimensions] = useState({window, screen});
+    const onChange = ({window, screen}) => {
+        setDimensions({window, screen});
+    };
+
+    useEffect(() => {
+        Dimensions.addEventListener('change', onChange);
+        return () => {
+            Dimensions.removeEventListener('change', onChange);
+        };
+    });
+
+    const isPortrait = () => {
+        return dimensions.screen.height > dimensions.screen.width
+    }
+
     const video = React.useRef(null);
     const [status, setStatus] = React.useState({});
 
@@ -35,24 +56,7 @@ export default function Contact({navigation}) {
             <ScrollView>
                 <View style={GlobalStyles.logoContainer}>
                     <Text style={GlobalStyles.logoText}><Text style={GlobalStyles.s}>S</Text>HION HOUSE</Text>
-                    <View style={{flexDirection: 'row', position: 'absolute', right: 100}}>
-                        <TouchableOpacity style={GlobalStyles.iconBorderL}>
-                            <AntDesign style={GlobalStyles.socialIconL} name="twitter"/>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={GlobalStyles.iconBorderL}>
-                            <FontAwesome name="facebook" style={GlobalStyles.socialIconL}/>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={GlobalStyles.iconBorderL}>
-                            <FontAwesome name="pinterest-p" size={22} style={GlobalStyles.socialIconL}/>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={[GlobalStyles.searchIconBorder, GlobalStyles.iconBorder]}>
-                            <Ionicons name="ios-search-outline" size={20} style={GlobalStyles.socialIconL}/>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={GlobalStyles.addToCardBorder}>
-                            <MaterialCommunityIcons name="shopping-outline" style={GlobalStyles.socialIcon}/>
-                            <Text style={{color: 'white', paddingHorizontal: 2}}>0</Text>
-                        </TouchableOpacity>
-                    </View>
+
                     <Ionicons
                         style={GlobalStyles.hamburger}
                         onPress={() => navigation.toggleDrawer()}
@@ -81,7 +85,7 @@ export default function Contact({navigation}) {
 
                         <Video
                             ref={video}
-                            style={styles.video}
+                            style={isPortrait() ? styles.video : styles.videoL}
                             source={{
                                 uri: 'https://player.vimeo.com/external/529682809.sd.mp4?s=97f15bc483ae0d2c5d1ae59b87820e99824be3e0&amp;profile_id=164&amp;oauth2_token_id=57447761',
                             }}
@@ -212,6 +216,11 @@ const styles = ScaledSheet.create(
             alignSelf: 'center',
             width: '340@s',
             height: '180@s',
+        },
+        videoL: {
+            alignSelf: 'center',
+            width: '640@s',
+            height: '338@s',
         },
         buttons: {
             flexDirection: 'row',

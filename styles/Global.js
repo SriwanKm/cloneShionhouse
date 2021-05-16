@@ -248,6 +248,12 @@ export const GlobalStyles = ScaledSheet.create({
         // alignItems: 'center',
         marginBottom: '40@s',
     },
+    blogImageL: {
+        flex: 1,
+        resizeMode: "cover",
+        height: '400@s',
+        marginBottom: '40@s',
+    },
     blogShadow: {
         shadowColor: '#000',
         shadowOpacity: 0.1,
