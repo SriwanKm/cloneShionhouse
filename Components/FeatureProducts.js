@@ -36,19 +36,23 @@ export default function FeatureProducts({navigation}) {
     const image = [
         {
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular1.png",
-            name: "GLASSES"
+            name: "GLASSES",
+            key: 1
         },
         {
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular2.png",
-            name: "WATCHES"
+            name: "WATCHES",
+            key: 2
         },
         {
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular3.png",
-            name: "JACKETS"
+            name: "JACKETS",
+            key: 3
         },
         {
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png",
-            name: "CLOTHES"
+            name: "CLOTHES",
+            key: 4
         },
 
     ];

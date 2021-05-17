@@ -24,6 +24,15 @@ export const GlobalStyles = ScaledSheet.create({
         alignItems: 'center',
         marginBottom: '40@s',
     },
+    imageL: {
+        flex: 1,
+        resizeMode: "cover",
+        height: '390@s',
+        // width: '290@s',
+        justifyContent: "center",
+        alignItems: 'center',
+        marginBottom: '40@s',
+    },
     shopButton: {
         backgroundColor: '#9F79FF',
         alignItems: 'center',
