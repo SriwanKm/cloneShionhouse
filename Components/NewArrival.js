@@ -56,36 +56,6 @@ export default function NewArrival({navigation}) {
     const isPortrait = () => {
         return dimensions.screen.height > dimensions.screen.width
     }
-// const images = image.map(({uri}) => {
-    // return (
-    //     <View key={Math.random()} style={{zIndex: 100, width: '50%'}}>
-    //         <ImageBackground source={{uri}} style={isPortrait() ? [GlobalStyles.image, {marginBottom: 0}] : GlobalStyles.imageL}>
-    //             <TouchableOpacity style={GlobalStyles.addToCardBorderArr}>
-    //                 <MaterialCommunityIcons name="shopping-outline"
-    //                                         style={[GlobalStyles.socialIcon, {color: '#9F79FF'}]}/>
-    //             </TouchableOpacity>
-    //         </ImageBackground>
-    //         <View style={GlobalStyles.newArrivalDetails}>
-    //             <TouchableOpacity><Text style={GlobalStyles.newArrivalText}>Knitted Jumper</Text></TouchableOpacity>
-    //             <View style={GlobalStyles.stars}>
-    //                 <AntDesign name="star" style={GlobalStyles.star}/>
-    //                 <AntDesign name="star" style={GlobalStyles.star}/>
-    //                 <AntDesign name="star" style={GlobalStyles.star}/>
-    //                 <AntDesign name="star" style={GlobalStyles.star}/>
-    //                 <AntDesign name="star" style={GlobalStyles.star}/>
-    //             </View>
-    //             <Text style={GlobalStyles.newArrivalPrice}>$ 30.00</Text>
-    //         </View>
-    //
-    //     </View>
-    // )
-    // const images = () => {
-    //
-    //     return (
-    //
-    //
-    //     )
-    // }
 
     return (
         <View>

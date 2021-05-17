@@ -1,5 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button, Dimensions} from 'react-native';
+import {
+    StyleSheet,
+    Text,
+    View,
+    ImageBackground,
+    TouchableOpacity,
+    ScrollView,
+    Button,
+    Dimensions,
+    FlatList
+} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
 import {NavigationContainer} from '@react-navigation/native';
@@ -22,18 +32,21 @@ export default function FeatureProducts({navigation}) {
     const onChange = ({window, screen}) => {
         setDimensions({window, screen});
     };
+    const [orientation, setOrientation] = useState(1)
 
     useEffect(() => {
         Dimensions.addEventListener('change', onChange);
         return () => {
             Dimensions.removeEventListener('change', onChange);
+            setOrientation(dimensions.screen.height > dimensions.screen.width ? 1 : 2)
         };
     });
 
     const isPortrait = () => {
         return dimensions.screen.height > dimensions.screen.width
     }
-    const image = [
+
+    const images = [
         {
             uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular1.png",
             name: "GLASSES",
@@ -56,22 +69,29 @@ export default function FeatureProducts({navigation}) {
         },
 
     ];
-    const images = image.map(({uri, name}) => {
-        return (
-            <ImageBackground key={Math.random()} source={{uri}} style={GlobalStyles.image}>
-            <TouchableOpacity
-                style={GlobalStyles.shopButton}>
-                <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.featureProductButt}>
-                <Text style={styles.featureProductText}>{name}</Text>
-            </TouchableOpacity>
-        </ImageBackground>
-        )
-    })
+
     return (
         <View>
-            {images}
+            <FlatList
+                numColumns={orientation}
+                key={orientation}
+                data={images}
+                renderItem={({item}) => {
+                    const uriObject = {uri: item.uri}
+                    return (
+                        <ImageBackground source={uriObject} style={[GlobalStyles.imageRender, {width: isPortrait()? null : '50%'}]}>
+                            <TouchableOpacity
+                                style={GlobalStyles.shopButton}>
+                                <Text style={GlobalStyles.shopButtonText}>Shop Now</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.featureProductButt}>
+                                <Text style={styles.featureProductText}>{item.name}</Text>
+                            </TouchableOpacity>
+                        </ImageBackground>
+                    )
+                }
+                }
+            />
         </View>
     )
 }
