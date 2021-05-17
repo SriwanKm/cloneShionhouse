@@ -73,7 +73,7 @@ export default function ShopPicker() {
                 placeholder="Type"
                 searchable={false}
                 style={styles.shopPicker}
-                zIndex={1000}
+                zIndex={1500}
                 open={openType}
                 value={valueType}
                 items={itemType}
@@ -85,7 +85,7 @@ export default function ShopPicker() {
                 placeholder="Size"
                 searchable={false}
                 style={styles.shopPicker}
-                zIndex={500}
+                zIndex={1000}
                 open={openSize}
                 value={valueSize}
                 items={itemSize}
@@ -97,7 +97,7 @@ export default function ShopPicker() {
                 placeholder="Color"
                 searchable={false}
                 style={styles.shopPicker}
-                zIndex={300}
+                zIndex={500}
                 open={openColor}
                 value={valueColor}
                 items={itemColor}
