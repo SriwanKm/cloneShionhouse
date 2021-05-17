@@ -1,23 +1,15 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer';
-import {LogBox, StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {View} from 'react-native';
 import Main from './Main'
 import {GlobalStyles} from "../styles/Global";
-import {useFonts} from 'expo-font'
-import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
 import Contact from "./Contact";
 import Blog from "./Blog";
 import {Ionicons} from "@expo/vector-icons";
-
-
-
-const Stack = createStackNavigator();
-
 
 
 function CustomDrawerContent(props) {

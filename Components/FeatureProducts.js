@@ -1,28 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import {
-    StyleSheet,
     Text,
     View,
     ImageBackground,
     TouchableOpacity,
-    ScrollView,
-    Button,
     Dimensions,
     FlatList
 } from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
-import Stacks from "./Stacks";
-import Footer from "./Footer";
-import NewArrival from "./NewArrival";
 
 
-const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
 const window = Dimensions.get('window');
 const screen = Dimensions.get('screen');

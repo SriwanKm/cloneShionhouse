@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {StyleSheet, Picker, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
-import {GlobalStyles} from "../styles/Global";
+import {View} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters'
 
 import {useState} from "react";
@@ -67,12 +66,6 @@ export default function ShopPicker() {
                 setItems={setItemCategory}
                 searchable={false}
                 arrowColor='pink'
-                // itemStyle={{borderColor:'blue'}}
-                // globalTextStyle={{
-                //     fontSize: 14,
-                //     textAlign: 'left',
-                //     color: '#ff4141'
-                // }}
                 dropDownStyle={{backgroundColor: '#3c9548'}}
 
             />

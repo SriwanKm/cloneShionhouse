@@ -1,41 +1,28 @@
-//This is an example code for Navigation Drawer with Custom Side bar//
-//This Example is for React Navigation 3.+//
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import React, { Component } from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
-import { Icon } from 'react-native-elements';
+
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
 import Main from './Main'
-import {GlobalStyles} from "../styles/Global";
-import {useFonts} from 'expo-font'
-import * as ScreenOrientation from 'expo-screen-orientation'
 import About from './About'
 import Shop from './Shop';
 import Contact from "./Contact";
-import Stacks from "./Stacks";
 
 
 export default function CustomSidebarMenu({ navigation }) {
 
         let items = [
             {
-                // navOptionThumb: 'camera',
                 navOptionName: 'Home',
                 screenToNavigate: 'Main',
             },
             {
-                // navOptionThumb: 'image',
                 navOptionName: 'Shop',
                 screenToNavigate: 'Shop',
             },
             {
-                // navOptionThumb: 'build',
                 navOptionName: 'About',
                 screenToNavigate: 'About',
             },
             {
-                // navOptionThumb: 'build',
                 navOptionName: 'Contact',
                 screenToNavigate: 'Contact',
             },
@@ -53,7 +40,6 @@ export default function CustomSidebarMenu({ navigation }) {
                         marginTop: 15,
                     }}
                 />
-                {/*Setting up Navigation Options from option array using loop*/}
                 <View style={{ width: '100%' }}>
                     {items.map((item, key) => (
                         <View
@@ -64,7 +50,6 @@ export default function CustomSidebarMenu({ navigation }) {
                                 paddingBottom: 10,
                             }}>
                             <View style={{ marginRight: 10, marginLeft: 40 }}>
-                            {/*    <Icon name={item.navOptionThumb} size={25} color="#808080" />*/}
                             <Text
                                 style={{
                                     fontSize: 15,

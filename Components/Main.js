@@ -1,21 +1,14 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button, Image} from 'react-native';
+import {Text, View, ImageBackground, TouchableOpacity, ScrollView} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
-import {ScaledSheet} from 'react-native-size-matters'
 import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
 import FeatureProducts from "./FeatureProducts";
 import Footer from "./Footer";
 import NewArrival from "./NewArrival";
-import Stacks from "./Stacks";
 
 
 const image = {uri: "https://preview.colorlib.com/theme/shionhouse/assets/img/gallery/popular4.png"}
-const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
 export default function Main({navigation}) {
     return (

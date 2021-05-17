@@ -1,22 +1,13 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {StyleSheet, Picker, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button, Dimensions} from 'react-native';
+import {Text, View, ImageBackground, TouchableOpacity, ScrollView, Dimensions} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
-import {ScaledSheet} from 'react-native-size-matters'
-import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
-import FeatureProducts from "./FeatureProducts";
+import {Ionicons, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
 import Footer from "./Footer";
-import NewArrival from "./NewArrival";
-import ShopPicker from "./ShopPicker"
 import {useEffect, useState} from "react";
-
 
 const window = Dimensions.get('window');
 const screen = Dimensions.get('screen');
-
 
 
 const images = [
@@ -52,7 +43,6 @@ export default function Blog({navigation}) {
             <View key={Math.random()} style={GlobalStyles.blogShadow}>
                 <ImageBackground source={{uri}} style={isPortrait() ? GlobalStyles.blogImage : GlobalStyles.blogImageL}>
                     <TouchableOpacity
-                        // onPress={() => navigation.navigate('Shop')}
                         style={GlobalStyles.dateButton}>
                         <Text style={[GlobalStyles.dateBlogText, {fontFamily: 'AbrilFatface'}]}>15</Text>
                         <Text style={GlobalStyles.dateBlogText}>Jan</Text>
@@ -105,9 +95,7 @@ export default function Blog({navigation}) {
 
                 <View style={GlobalStyles.mainSection}>
 
-
                     {image}
-
 
                 </View>
                 <Footer/>

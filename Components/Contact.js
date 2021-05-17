@@ -1,15 +1,9 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 import {
-    StyleSheet,
-    Picker,
     Text,
     View,
     TextInput,
-    ImageBackground,
     TouchableOpacity,
     ScrollView,
     Button,
@@ -17,12 +11,9 @@ import {
 } from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
-import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons, Feather} from '@expo/vector-icons';
-import FeatureProducts from "./FeatureProducts";
+import {Ionicons, AntDesign, MaterialCommunityIcons, Feather} from '@expo/vector-icons';
 import Footer from "./Footer";
-import NewArrival from "./NewArrival";
-import ShopPicker from "./ShopPicker"
-import {Video, AVPlaybackStatus} from 'expo-av';
+import {Video} from 'expo-av';
 import {useEffect, useState} from "react";
 
 

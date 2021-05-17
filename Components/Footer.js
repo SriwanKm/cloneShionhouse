@@ -1,8 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, ScrollView, Button} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import {GlobalStyles} from "../styles/Global";
 import {ScaledSheet} from 'react-native-size-matters'
-import {Ionicons, AntDesign, FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons';
+import {AntDesign, FontAwesome} from '@expo/vector-icons';
 
 
 export default function Footer() {
