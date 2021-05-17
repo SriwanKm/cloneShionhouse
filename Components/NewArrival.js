@@ -43,19 +43,20 @@ export default function NewArrival({navigation}) {
     const onChange = ({window, screen}) => {
         setDimensions({window, screen});
     };
+    const [orientation, setOrientation] = useState(1)
 
     useEffect(() => {
         Dimensions.addEventListener('change', onChange);
         return () => {
             Dimensions.removeEventListener('change', onChange);
+            setOrientation(dimensions.screen.height > dimensions.screen.width ? 1 : 2)
         };
     });
 
     const isPortrait = () => {
         return dimensions.screen.height > dimensions.screen.width
     }
-
-    // const images = image.map(({uri}) => {
+// const images = image.map(({uri}) => {
     // return (
     //     <View key={Math.random()} style={{zIndex: 100, width: '50%'}}>
     //         <ImageBackground source={{uri}} style={isPortrait() ? [GlobalStyles.image, {marginBottom: 0}] : GlobalStyles.imageL}>
@@ -90,7 +91,8 @@ export default function NewArrival({navigation}) {
         <View>
             <View style={{flexDirection: 'row'}}>
                 <FlatList
-                    // numColumns={1}
+                    numColumns={orientation}
+                    key={orientation}
                     data={images}
                     renderItem={({item}) => {
                         const uriObject = {uri: item.uri}

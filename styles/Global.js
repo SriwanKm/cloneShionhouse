@@ -59,7 +59,7 @@ export const GlobalStyles = ScaledSheet.create({
         letterSpacing: 1,
     },
     mainSection: {
-        marginHorizontal: '25@s',
+        marginHorizontal: '15@s',
 
     },
     socialIcon: {
