@@ -90,13 +90,12 @@ export default function NewArrival({navigation}) {
         <View>
             <View style={{flexDirection: 'row'}}>
                 <FlatList
-                    numColumns={2}
+                    // numColumns={1}
                     data={images}
-                    // style={{zIndex: 100, width: '50%'}}
                     renderItem={({item}) => {
                         const uriObject = {uri: item.uri}
-                        return (<View style={{zIndex: 100, width: '50%'}}>
-                                <ImageBackground source={uriObject} style={[GlobalStyles.image, {marginBottom: 0}]}>
+                        return (<View style={{zIndex: 100, width: isPortrait()? null : '50%'}}>
+                                <ImageBackground source={uriObject} style={[GlobalStyles.imageRender, {marginBottom: 0}]}>
                                     <TouchableOpacity style={GlobalStyles.addToCardBorderArr}>
                                         <MaterialCommunityIcons name="shopping-outline"
                                                                 style={[GlobalStyles.socialIcon, {color: '#9F79FF'}]}/>
@@ -114,7 +113,6 @@ export default function NewArrival({navigation}) {
                                     </View>
                                     <Text style={GlobalStyles.newArrivalPrice}>$ 30.00</Text>
                                 </View>
-
                             </View>
                         )
                     }

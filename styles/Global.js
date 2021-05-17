@@ -24,11 +24,19 @@ export const GlobalStyles = ScaledSheet.create({
         alignItems: 'center',
         marginBottom: '40@s',
     },
+    imageRender: {
+        flex: 1,
+        resizeMode: "cover",
+        height: '390@s',
+        justifyContent: "center",
+        alignItems: 'center',
+        marginBottom: '40@s',
+        marginHorizontal: '10@s',
+    },
     imageL: {
         flex: 1,
         resizeMode: "cover",
         height: '390@s',
-        // width: '290@s',
         justifyContent: "center",
         alignItems: 'center',
         marginBottom: '40@s',
@@ -113,7 +121,8 @@ export const GlobalStyles = ScaledSheet.create({
         borderColor: '#F6F8FE',
         borderWidth: 1,
         paddingVertical: '25@s',
-        marginBottom: '50@s'
+        marginBottom: '50@s',
+        marginHorizontal: '10@s',
     },
     newArrivalText: {
         fontSize: '18@s',
